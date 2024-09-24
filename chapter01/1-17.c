@@ -38,12 +38,12 @@ int main(void)
     char first[THRES];
     char continuous[THRES];
 
-    while ((len = my_getline(first, THRES)) > 0) {
+    while ((len = getline(first, THRES)) > 0) {
         if (len == THRES-1) {
             printf("%s", first);
             nextLen = THRES-1;
             while (nextLen == THRES-1) {
-                nextLen = my_getline(continuous, THRES);
+                nextLen = getline(continuous, THRES);
                 printf("%s", continuous);
             }
         }
